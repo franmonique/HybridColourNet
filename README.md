@@ -1,8 +1,6 @@
-# HybridColourNet
+# HybridColourNet - Vehicle Detection and Colour Classification
 
-# HybridColourNet-Vehicle-Detection-Color-Classification
-
-A fun project exploring vehicle detection and color classification using a hybrid CNN+KNN approach.
+A fun project exploring vehicle detection and colour classification using a hybrid CNN+KNN approach.
 
 Project Overview
 -
@@ -26,7 +24,7 @@ Although I did train the model separately, I ultimately chose to use the pretrai
 
 **2. Colour Classification Model**
 
-**KNN:** The K-Nearest Neighbors (KNN) model is used as a lightweight, fast, and interpretable baseline for vehicle colour classification.
+**KNN:** The K-Nearest Neighbours (KNN) model is used as a lightweight, fast, and interpretable baseline for vehicle colour classification.
 It classifies each vehicle by comparing its mean Lab colour (a 3-value feature) with the closest samples in the training set.
 However, it struggles with:
 - "grey" as it overlaps with black and white in brightness, causing those colours to blend together in Lab space.
@@ -37,7 +35,7 @@ However, it struggles with:
 **CNN:** This is a small, custom-built neural network trained end-to-end on the dataset.
 A CNN can learn deep visual patterns such as shading, texture, lighting conditions, and localized colour cues. 
 It works better than KNN overall, but CNN struggles with:
-- Grey vs. Black/White: These colors share overlapping brightness values, causing confusion.
+- Grey vs. Black/White: These colours share overlapping brightness values, causing confusion.
 - Far-distance vehicles: Small crops mean fewer pixels → CNN loses detail and becomes less confident.
 - 
 ![CNN Training Results](images/training_history.png)
@@ -70,9 +68,9 @@ The final decision was to use the KNN and CNN together.
 
 **3. Dataset**
 
-This project is based on the **VCOR – Vehicle Color Recognition Dataset** from Kaggle. I adapted the original dataset for a 6-class vehicle colour task ```black``` ```white``` ```grey``` ```blue``` ```red``` ```other```, as well as the following additional changes:
-- class balancing: evening out the number of samplesper colour class
-- simple data augmentaion with the options below (doubled the dataset):
+This project is based on the **VCOR – Vehicle Colour Recognition Dataset** from Kaggle. I adapted the original dataset for a 6-class vehicle colour task ```black``` ```white``` ```grey``` ```blue``` ```red``` ```other```, as well as the following additional changes:
+- class balancing: evening out the number of samples per colour class
+- simple data augmentation with the options below (doubled the dataset):
   - Horizontal flip
   - Gaussian blur
   - Random corner crop
@@ -127,7 +125,7 @@ dataset/
     └── ...
 ```
 
-You are free to train on any other colors, but your dataset must include the 5 core colours as shown above.
+You are free to train on any other colours, but your dataset must include the 5 core colours as shown above.
 
 Training/Testing CNN
 -
@@ -221,7 +219,7 @@ Image from: https://www.vecteezy.com/photo/18761489-mexico-city-mexico-february-
 Future Work/Improvements
 - 
 
-From results and observation, ehre are some of the key areas that still need work in this project:
+From results and observation, here are some of the key areas that still need work in this project:
 
 **Better-suited datasets**: While the CNN achieved high accuracy on the dataset, this did not always translate well during inference, especially for small or distant vehicles. This highlights the need for datasets that better match real-world conditions and also explains why KNN was kept as part of the final system.
 
@@ -229,7 +227,7 @@ From results and observation, ehre are some of the key areas that still need wor
 
 **Video tracking support**: Adding tracking for videos could be a great help with providing stable colour predictions and making the results more visually pleasing and fun to watch. It would also increase the application capabilities. 
 
-**Handling tricky colors and reflections**: Colours like grey, silver, and white are still difficult, especially with strong reflections or changing lighting. Exploring better preprocessing or using temporal information could help reduce these errors.
+**Handling tricky colours and reflections**: Colours like grey, silver, and white are still difficult, especially with strong reflections or changing lighting. Exploring better pre-processing or using temporal information could help reduce these errors.
 
 Reflection
 -
@@ -243,14 +241,12 @@ Acknowledgements
 Thanks to the authors and researchers of LEAF-YOLO for their impressive work and for openly sharing their implementation, which was used for the vehicle detection component of this project.
 https://github.com/highquanglity/LEAF-YOLO
 
-**VCoR Vehicle Color Recognition Dataset (Kaggle)**
+**VCoR Vehicle Colour Recognition Dataset (Kaggle)**
 
-Thanks to Landry Kezebou for providing the VCoR vehicle color dataset, which was used for training and evaluating the vehicle color classification models.
+Thanks to Landry Kezebou for providing the VCoR vehicle colour dataset, which was used for training and evaluating the vehicle color classification models.
 https://www.kaggle.com/datasets/landrykezebou/vcor-vehicle-color-recognition-dataset
 
 **VisDrone 2019 Detection Dataset**
 
 Thanks to the VisDrone team for releasing a large-scale, well-annotated dataset that supports research in vehicle detection and aerial imagery analysis.
 https://datasetninja.com/vis-drone-2019-det
-
-
