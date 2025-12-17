@@ -88,10 +88,14 @@ conda activate hybridcolournet
 2. Clone repo
    
 ```
-git clone https://github.com/franmonique/HybridColourNet-Vehicle-Detection-Color-Classification.git
+git clone https://github.com/franmonique/HybridColourNet.git
 ```
 
 3. Clone LEAF-YOLO repo **inside** project.
+   
+```
+cd HybridColourNet
+```
 
 Follow the link below and clone their repo INSIDE the HybridColourNet project. 
 https://github.com/highquanglity/LEAF-YOLO
