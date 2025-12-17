@@ -1,0 +1,33 @@
+# HybridColourNet Requirements
+# Usage: pip install -r requirements.txt
+
+# Core
+numpy>=1.18.5,<1.24.0
+opencv-python>=4.1.1
+matplotlib>=3.2.2
+Pillow==9.5.0
+PyYAML>=5.3.1
+requests>=2.23.0
+scipy>=1.4.1
+tqdm>=4.41.0
+
+# ML / metrics
+scikit-learn>=1.0
+
+# YOLO logging/plots
+tensorboard>=2.4.1
+pandas>=1.1.4
+seaborn>=0.11.0
+
+# YOLO compatibility constraint
+protobuf<4.21.3
+
+# CNN 
+tensorflow==2.10.0
+keras==2.10.0
+
+# Extras
+psutil
+thop
+pycocotools>=2.0
+albumentations>=1.0.3
