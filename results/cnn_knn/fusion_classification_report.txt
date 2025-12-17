@@ -1,0 +1,36 @@
+CNN + KNN FUSION - 6-CLASS CLASSIFICATION REPORT
+============================================================
+
+Test set         : VCoR_aug/test
+CNN model        : results/cnn/vehicle_color_best.h5
+KNN data         : results/knn/color_knn_data.npz
+Total samples    : 1734
+CNN-only accuracy: 90.43%
+Fusion accuracy  : 90.02%
+Improvement      : -0.40%
+
+Per-class (sorted by fusion accuracy):
+----------------------------------------
+white     : 97.20% (n=107)
+red       : 96.43% (n=168)
+blue      : 95.45% (n=198)
+other     : 89.31% (n=1038)
+black     : 88.89% (n=108)
+grey      : 72.17% (n=115)
+
+============================================================
+
+Detailed classification report (fusion):
+
+              precision    recall  f1-score   support
+
+       black      0.701     0.889     0.784       108
+       white      0.776     0.972     0.863       107
+        grey      0.692     0.722     0.706       115
+        blue      0.917     0.955     0.936       198
+         red      0.835     0.964     0.895       168
+       other      0.983     0.893     0.936      1038
+
+    accuracy                          0.900      1734
+   macro avg      0.817     0.899     0.853      1734
+weighted avg      0.912     0.900     0.903      1734

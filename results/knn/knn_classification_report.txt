@@ -1,0 +1,33 @@
+KNN 6-CLASS CLASSIFICATION REPORT
+==================================================
+
+Test set: VCoR_aug/test
+KNN data: results/knn/color_knn_data.npz
+k: 3
+Total samples: 1734
+Overall accuracy: 80.22%
+
+Per-class accuracy:
+------------------------------
+red       : 88.10% (n=168)
+blue      : 86.36% (n=198)
+white     : 83.18% (n=107)
+other     : 81.60% (n=1038)
+black     : 78.70% (n=108)
+grey      : 44.35% (n=115)
+
+==================================================
+
+Detailed report:
+              precision    recall  f1-score   support
+
+       black      0.521     0.787     0.627       108
+       white      0.549     0.832     0.662       107
+        grey      0.405     0.443     0.423       115
+        blue      0.881     0.864     0.872       198
+         red      0.775     0.881     0.825       168
+       other      0.943     0.816     0.875      1038
+
+    accuracy                          0.802      1734
+   macro avg      0.679     0.770     0.714      1734
+weighted avg      0.834     0.802     0.811      1734

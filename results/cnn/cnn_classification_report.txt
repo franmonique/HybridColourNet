@@ -1,0 +1,32 @@
+CNN 6-CLASS CLASSIFICATION REPORT
+==================================================
+
+Test set: VCoR_aug/test
+Model: results/cnn/vehicle_color_best.h5
+Total samples: 1734
+Overall accuracy: 90.43%
+
+Per-class accuracy:
+------------------------------
+white     : 96.26% (n=107)
+red       : 95.83% (n=168)
+blue      : 95.45% (n=198)
+other     : 89.88% (n=1038)
+black     : 84.26% (n=108)
+grey      : 79.13% (n=115)
+
+==================================================
+
+Detailed report:
+              precision    recall  f1-score   support
+
+       black      0.728     0.843     0.781       108
+       white      0.844     0.963     0.900       107
+        grey      0.655     0.791     0.717       115
+        blue      0.917     0.955     0.936       198
+         red      0.847     0.958     0.899       168
+       other      0.980     0.899     0.938      1038
+
+    accuracy                          0.904      1734
+   macro avg      0.829     0.901     0.862      1734
+weighted avg      0.914     0.904     0.907      1734
