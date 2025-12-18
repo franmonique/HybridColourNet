@@ -29,7 +29,7 @@ It classifies each vehicle by comparing its mean Lab colour (a 3-value feature) 
 However, it struggles with:
 - "grey" as it overlaps with black and white in brightness, causing those colours to blend together in Lab space.
 
-![KNN Confusion Matrix](images/knn_confusion_matrix_percent.png)
+![KNN Confusion Matrix](results/knn/knn_confusion_matrix_percent.png)
 ![KNN Per-Class Accuracy](images/knn_per_class_accuracy.png)
 
 **CNN:** This is a small, custom-built neural network trained end-to-end on the dataset.
